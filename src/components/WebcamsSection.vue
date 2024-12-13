@@ -48,7 +48,7 @@ const allWebcams = ref([
 </script>
 
 <template>
-  <ul>
+  <ul class="flex flex-wrap auto-cols-auto gap-5">
     <li v-for="webcam in allWebcams" :key="webcam.id">
       <WebcamItem
         :id="webcam.id"
@@ -63,22 +63,3 @@ const allWebcams = ref([
     </li>
   </ul>
 </template>
-
-<style scoped>
-ul {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap onto new lines */
-  gap: 20px; /* Space between flex items */
-  list-style: none; /* Remove default list styling */
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  box-sizing: border-box; /* Include padding and border in width calculations */
-  border: 1px solid #ccc; /* Optional: Add a border */
-  border-radius: 8px; /* Optional: Rounded corners */
-  overflow: hidden; /* Ensure content doesn't overflow */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a card look */
-}
-</style>

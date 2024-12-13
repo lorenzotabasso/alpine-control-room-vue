@@ -11,29 +11,19 @@ const props = defineProps({
 </script>
 
 <template>
-  <div v-if="props.contentType === 'img'" class="webcam-container">
-    <img :src="props.link" :alt="props.resort + ' - ' + props.label" />
+  <div class="w-96 h-64 flex flex-col justify-center items-center overflow-hidden">
+    <img
+      class="min-w-full min-h-full object-cover"
+      v-if="props.contentType === 'img'"
+      :src="props.link"
+      :alt="props.resort + ' - ' + props.label"
+    />
+    <img
+      class="min-w-full min-h-full object-cover"
+      v-if="props.contentType === 'iframe'"
+      :src="props.thumbnailLink"
+      :alt="props.label"
+    />
   </div>
-  <div v-if="props.contentType === 'iframe'" class="webcam-container">
-    <img :src="props.thumbnailLink" :alt="props.label" />
-  </div>
-  <h2>{{ props.resort + ' - ' + props.label }}</h2>
+  <h2 class="m-4">{{ props.resort + ' - ' + props.label }}</h2>
 </template>
-
-<style scoped>
-.webcam-container {
-  width: 496px;
-  height: 279px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.webcam-container img {
-  min-width: 100%; /* Ensures the image is wide enough to cover the container */
-  min-height: 100%; /* Ensures the image is tall enough to cover the container */
-  object-fit: cover; /* Makes sure the image fills the div without distortion */
-}
-</style>
