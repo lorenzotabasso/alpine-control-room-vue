@@ -9,7 +9,7 @@ const allWebcams = ref<Webcam[]>(webcams)
 
 <template>
   <div class="container mx-auto p-4">
-    <ul class="flex flex-wrap auto-cols-auto gap-5">
+    <ul class="flex flex-wrap justify-center auto-cols-auto gap-5">
       <li v-for="webcam in allWebcams" :key="webcam.id">
         <WebcamCard
           :id="webcam.id"

@@ -1,4 +1,4 @@
-import type { Webcam } from '@/models/webcam'
+import { ContentType, type Webcam } from '@/models/webcam'
 
 export const webcams: Webcam[] = [
   {
@@ -6,15 +6,30 @@ export const webcams: Webcam[] = [
     resort: 'Crevacol',
     label: 'Arrivo seggiovia testa bassa',
     altitude: '2450 m',
-    contentType: 'img',
+    contentType: ContentType.IMG,
     link: 'https://pila.it/webcams/Crevacol01.jpg',
+  },
+  {
+    id: 1,
+    resort: 'Crevacol',
+    label: 'Foyer du fond, Flassin',
+    altitude: '1380 m',
+    contentType: ContentType.IMG,
+    link: 'https://www.lovevda.it/Media/LovevdaResp/Cache/Webcam/big_soyen.jpg?b28bfe58-ba16-4619-a175-167b092503c2',
+  },
+  {
+    id: 2,
+    resort: 'Crevacol',
+    label: 'Saint Rhémy en Bosses',
+    contentType: ContentType.IMG,
+    link: 'https://www.lovevda.it/Media/LovevdaResp/Cache/Webcam/big_crevacol.jpg?bab0fbcf-05a3-466b-a213-b31f6ab77a49',
   },
   {
     id: 1,
     resort: 'Pila',
     label: 'Grimondet',
     altitude: '2348 m',
-    contentType: 'iframe',
+    contentType: ContentType.IFRAME,
     link: 'https://webtv.feratel.com/webtv/?design=v3&cam=6316',
     thumbnailLink: 'https://wtvpict.feratel.com/picture/38/6316.jpeg?&design=v3',
   },
@@ -22,7 +37,7 @@ export const webcams: Webcam[] = [
     id: 2,
     resort: 'Bardonecchia',
     label: 'Ban',
-    contentType: 'iframe',
+    contentType: ContentType.IFRAME,
     link: 'https://app.webcam-hd.com/bardonecchia/banold',
     thumbnailLink: 'https://www.trinum.com/ibox/ftpcam/small_bardonecchia_ban.jpg',
   },
@@ -30,7 +45,7 @@ export const webcams: Webcam[] = [
     id: 3,
     resort: 'Vialattea - Sestriere',
     label: 'Monte Fraiteve',
-    contentType: 'iframe',
+    contentType: ContentType.IFRAME,
     link: 'https://montefraiteve.panomax.com/',
     thumbnailLink: 'https://live-image.panomax.com/cams/5712/preview_og.jpg',
   },
@@ -39,7 +54,7 @@ export const webcams: Webcam[] = [
     resort: 'Serre Chevalier',
     label: 'Col du Lautaret',
     altitude: '2058 m',
-    contentType: 'iframe',
+    contentType: ContentType.IFRAME,
     link: 'https://www.skaping.com/serrechevalier/coldulautaret',
   },
 ]

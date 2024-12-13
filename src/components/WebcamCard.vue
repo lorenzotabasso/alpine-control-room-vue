@@ -19,7 +19,7 @@ function hasThumbnail(source: Webcam): boolean {
 
 <template>
   <div class="border-solid border-2 rounded-lg">
-    <div class="w-96 h-64 flex flex-col justify-center items-center overflow-hidden rounded-t-lg">
+    <div class="w-80 h-64 flex flex-col justify-center items-center overflow-hidden rounded-t-lg">
       <img
         v-if="hasThumbnail(props)"
         class="min-w-full min-h-full object-cover"
