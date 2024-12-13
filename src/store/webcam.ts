@@ -1,8 +1,6 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-import WebcamItem from './WebcamItem.vue'
+import type { Webcam } from '@/models/webcam'
 
-const allWebcams = ref([
+export const webcams: Webcam[] = [
   {
     id: 0,
     resort: 'Crevacol',
@@ -44,22 +42,4 @@ const allWebcams = ref([
     contentType: 'iframe',
     link: 'https://www.skaping.com/serrechevalier/coldulautaret',
   },
-])
-</script>
-
-<template>
-  <ul class="flex flex-wrap auto-cols-auto gap-5">
-    <li v-for="webcam in allWebcams" :key="webcam.id">
-      <WebcamItem
-        :id="webcam.id"
-        :resort="webcam.resort"
-        :label="webcam.label"
-        :altitude="webcam.altitude"
-        :contentType="webcam.contentType"
-        :link="webcam.link"
-        :thumbnailLink="webcam.thumbnailLink"
-      >
-      </WebcamItem>
-    </li>
-  </ul>
-</template>
+]
