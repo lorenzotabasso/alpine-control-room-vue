@@ -57,4 +57,20 @@ export const webcams: Webcam[] = [
     contentType: ContentType.IFRAME,
     link: 'https://www.skaping.com/serrechevalier/coldulautaret',
   },
+  {
+    id: 5,
+    resort: 'Serre Chevalier',
+    label: 'Proel',
+    altitude: '2566 m',
+    contentType: ContentType.IFRAME,
+    link: 'https://www.skaping.com/serre-chevalier/prorel',
+  },
+  {
+    id: 6,
+    resort: 'Serre Chevalier',
+    label: 'Biancon',
+    altitude: '2566 m',
+    contentType: ContentType.IFRAME,
+    link: 'https://www.skaping.com/serre-chevalier/briancon',
+  },
 ]
