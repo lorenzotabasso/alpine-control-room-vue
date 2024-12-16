@@ -2,7 +2,9 @@ import { ContentType, type Webcam } from '@/models/webcam'
 
 export const webcams: Webcam[] = [
   {
-    id: 0,
+    nation: 'ITA',
+    region: "Valle d'Aosta",
+    subRegion: 'Valle del Gran San Bernardo',
     resort: 'Crevacol',
     label: 'Arrivo seggiovia testa bassa',
     altitude: '2450 m',
@@ -10,7 +12,9 @@ export const webcams: Webcam[] = [
     link: 'https://pila.it/webcams/Crevacol01.jpg',
   },
   {
-    id: 1,
+    nation: 'ITA',
+    region: "Valle d'Aosta",
+    subRegion: 'Valle del Gran San Bernardo',
     resort: 'Crevacol',
     label: 'Foyer du fond, Flassin',
     altitude: '1380 m',
@@ -18,14 +22,17 @@ export const webcams: Webcam[] = [
     link: 'https://www.lovevda.it/Media/LovevdaResp/Cache/Webcam/big_soyen.jpg?b28bfe58-ba16-4619-a175-167b092503c2',
   },
   {
-    id: 2,
+    nation: 'ITA',
+    region: "Valle d'Aosta",
     resort: 'Crevacol',
     label: 'Saint Rhémy en Bosses',
     contentType: ContentType.IMG,
     link: 'https://www.lovevda.it/Media/LovevdaResp/Cache/Webcam/big_crevacol.jpg?bab0fbcf-05a3-466b-a213-b31f6ab77a49',
   },
   {
-    id: 1,
+    nation: 'ITA',
+    region: "Valle d'Aosta",
+    subRegion: 'Valle del Gran San Bernardo',
     resort: 'Pila',
     label: 'Grimondet',
     altitude: '2348 m',
@@ -34,7 +41,9 @@ export const webcams: Webcam[] = [
     thumbnailLink: 'https://wtvpict.feratel.com/picture/38/6316.jpeg?&design=v3',
   },
   {
-    id: 2,
+    nation: 'ITA',
+    region: 'Piemonte',
+    subRegion: 'Val di Susa',
     resort: 'Bardonecchia',
     label: 'Ban',
     contentType: ContentType.IFRAME,
@@ -42,7 +51,9 @@ export const webcams: Webcam[] = [
     thumbnailLink: 'https://www.trinum.com/ibox/ftpcam/small_bardonecchia_ban.jpg',
   },
   {
-    id: 3,
+    nation: 'ITA',
+    region: 'Piemonte',
+    subRegion: 'Val di Susa',
     resort: 'Vialattea - Sestriere',
     label: 'Monte Fraiteve',
     contentType: ContentType.IFRAME,
@@ -50,7 +61,9 @@ export const webcams: Webcam[] = [
     thumbnailLink: 'https://live-image.panomax.com/cams/5712/preview_og.jpg',
   },
   {
-    id: 4,
+    nation: 'FRA',
+    region: "Provence-Alpes-Côte d'Azur",
+    subRegion: 'Hautes-Alpes',
     resort: 'Serre Chevalier',
     label: 'Col du Lautaret',
     altitude: '2058 m',
@@ -58,7 +71,9 @@ export const webcams: Webcam[] = [
     link: 'https://www.skaping.com/serrechevalier/coldulautaret',
   },
   {
-    id: 5,
+    nation: 'FRA',
+    region: "Provence-Alpes-Côte d'Azur",
+    subRegion: 'Hautes-Alpes',
     resort: 'Serre Chevalier',
     label: 'Proel',
     altitude: '2566 m',
@@ -66,7 +81,9 @@ export const webcams: Webcam[] = [
     link: 'https://www.skaping.com/serre-chevalier/prorel',
   },
   {
-    id: 6,
+    nation: 'FRA',
+    region: "Provence-Alpes-Côte d'Azur",
+    subRegion: 'Hautes-Alpes',
     resort: 'Serre Chevalier',
     label: 'Biancon',
     altitude: '2566 m',

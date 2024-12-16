@@ -4,7 +4,9 @@ export enum ContentType {
 }
 
 export interface Webcam {
-  id: number
+  nation: string
+  region: string
+  subRegion?: string
   resort: string
   label: string
   altitude?: string
