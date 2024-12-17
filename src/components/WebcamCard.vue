@@ -33,15 +33,8 @@ function hasThumbnail(source: Webcam): boolean {
     </div>
     <div class="grid">
       <div>
-        <div class="flex justify-start content-center">
-          <div class="flex justify-start content-center w-8">
-            <IconMap></IconMap>
-          </div>
-          <p class="m-2">{{ props.resort }}</p>
-        </div>
-        <!-- <p class="m-2">({{ props.nation }}, {{ props.region }}, {{ props.subRegion }})</p> -->
-        <p class="m-2">{{ props.label }}</p>
-        <p v-if="props.altitude" class="m-2">{{ props.altitude }}</p>
+        <p class="m-2 text-xl font-bold">{{ props.resort }}</p>
+        <p class="m-2">{{ props.altitude ? props.label + ', ' + props.altitude : props.label }}</p>
       </div>
       <div class="grid grid-cols-2">
         <button

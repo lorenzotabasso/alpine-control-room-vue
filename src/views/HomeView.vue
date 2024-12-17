@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { webcams } from '@/store/webcam'
 import type { Webcam } from '@/models/webcam'
+import { webcams } from '@/store/webcam'
 import { ref } from 'vue'
-import WebcamCard from '../components/WebcamCard.vue'
+import WebcamCard from '@/components/WebcamCard.vue'
 
 const allWebcams = ref<Webcam[]>(webcams)
 </script>
