@@ -56,14 +56,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <h3>An interactive leaflet map</h3>
-  <div id="map" style="height: 400px"></div>
+  <div id="map"></div>
 </template>
 
 <style scoped>
 #map {
   width: 100%;
-  height: 400px;
+  height: 60em;
 }
 .custom-icon {
   display: inline-block;

@@ -42,11 +42,8 @@ function toggleMenu() {
     </div>
   </nav>
 
-  <!-- Mobile menu -->
   <div id="mobile-menu" class="md:hidden bg-cyan-500 text-white space-y-4 p-4 hidden">
-    <a href="#" class="block">Home</a>
-    <a href="#" class="block">About</a>
-    <a href="#" class="block">Services</a>
-    <a href="#" class="block">Contact</a>
+    <RouterLink to="/" class="text-white hover:text-gray-300">Webcams</RouterLink>
+    <RouterLink to="/map" class="text-white hover:text-gray-300">Map</RouterLink>
   </div>
 </template>
