@@ -8,7 +8,7 @@ import type { MapOptions } from 'leaflet'
 
 onMounted(() => {
   const mapOptions: MapOptions = { scrollWheelZoom: true, maxZoom: 28, minZoom: 7 }
-  const map = L.map('map', mapOptions).setView([45.159, 8.361], 7)
+  const map = L.map('map', mapOptions).setView([45.194, 7.427], 8)
 
   // Add tile layer for copyright on cartographic data
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -29,6 +29,8 @@ onMounted(() => {
       } else {
         markerLabel = `<b>${webcam.resort} - ${webcam.label}</b>`
       }
+
+      markerLabel += `<br><a href="${webcam.link}" target="_blank">Open webcam</a>`
 
       L.marker([webcam.coordinates.latitude, webcam.coordinates.longitude])
         .bindPopup(markerLabel)
