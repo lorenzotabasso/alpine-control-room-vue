@@ -1,57 +1,47 @@
 <script setup lang="ts">
 import * as L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import { onMounted } from 'vue'
-
-function getMarkerColor(status: string): string {
-  switch (status) {
-    case 'active':
-      return 'green'
-    case 'inactive':
-      return 'red'
-    case 'pending':
-      return 'orange'
-    default:
-      return 'blue'
-  }
-}
+import { onMounted, ref } from 'vue'
+import type { Webcam } from '@/models/webcam'
+import { webcams } from '@/store/webcam'
+import type { MapOptions } from 'leaflet'
 
 onMounted(() => {
-  const map = L.map('map', { scrollWheelZoom: false }).setView([45.159, 8.361], 7)
+  const mapOptions: MapOptions = { scrollWheelZoom: true, maxZoom: 28, minZoom: 7 }
+  const map = L.map('map', mapOptions).setView([45.159, 8.361], 7)
 
-  // Aggiungi tile layer
+  // Add tile layer for copyright on cartographic data
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map)
 
-  // Dati dinamici per i marker
-  const markersData = [
-    { lat: 45.828209, lon: 7.159111, status: 'active', id: 1 },
-    { lat: 44.95772, lon: 6.91328, status: 'inactive', id: 2 },
-    { lat: 44.90054, lon: 6.58643, status: 'pending', id: 3 },
-  ]
+  const allWebcams = ref<Webcam[]>(webcams)
+  allWebcams.value.map((webcam: Webcam) => {
+    if (webcam.coordinates) {
+      let markerLabel: string
+      if (webcam.altitude) {
+        if (webcam.resortGroup) {
+          markerLabel = `<b>${webcam.resortGroup}</b><br><b>${webcam.resort} - ${webcam.label}</b><br><p>${webcam.altitude}</p>`
+        } else {
+          markerLabel = `<b>${webcam.resort} - ${webcam.label}</b><br><p>${webcam.altitude}</p>`
+        }
+      } else {
+        markerLabel = `<b>${webcam.resort} - ${webcam.label}</b>`
+      }
 
-  // Aggiungere i marker dinamicamente
-  markersData.forEach((markerData) => {
-    const { lat, lon, status } = markerData
+      L.marker([webcam.coordinates.latitude, webcam.coordinates.longitude])
+        .bindPopup(markerLabel)
+        .addTo(map)
+    }
 
-    // Determina il colore in base allo stato
-    const markerColor = getMarkerColor(status)
-
-    // Crea un'icona personalizzata con il colore dinamico
-    const customIcon = L.divIcon({
-      className: 'custom-icon',
-      html: `<div style="width: 20px; height: 20px; background-color: ${markerColor}; border-radius: 50%;"></div>`,
-    })
-
-    // Aggiungi il marker alla mappa
-    L.marker([lat, lon], { icon: customIcon }).bindPopup(`<b>Status:</b> ${status}`).addTo(map)
+    // TODO: uncomment when finished with the custom icon
+    // const customIcon = L.divIcon({
+    //   className: 'custom-icon',
+    //   html: `<div style="width: 20px; height: 20px; background-color: ${markerColor}; border-radius: 50%;"></div>`,
+    // })
+    // L.marker([lat, lon], { icon: customIcon }).bindPopup(`<b>Status:</b> ${status}`).addTo(map)
   })
-
-  // Impostare i limiti di zoom
-  map.setMaxZoom(28)
-  map.setMinZoom(7)
 })
 </script>
 
@@ -62,7 +52,7 @@ onMounted(() => {
 <style scoped>
 #map {
   width: 100%;
-  height: 60em;
+  height: 40em;
 }
 .custom-icon {
   display: inline-block;
