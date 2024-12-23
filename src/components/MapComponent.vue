@@ -54,7 +54,7 @@ onMounted(() => {
 <style scoped>
 #map {
   width: 100%;
-  height: 40em;
+  min-height: 50em;
 }
 .custom-icon {
   display: inline-block;

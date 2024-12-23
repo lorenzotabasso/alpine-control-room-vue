@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import { reactive } from 'vue'
 import { RouterLink } from 'vue-router'
 
-function toggleMenu() {
-  document.getElementById('mobile-menu')?.classList.toggle('hidden')
-}
+const state = reactive({
+  isMenuOpen: false,
+})
 </script>
 
 <template>
@@ -22,7 +23,11 @@ function toggleMenu() {
 
       <!-- Mobile menu button -->
       <div class="md:hidden">
-        <button id="menu-button" class="text-white" v-on:click="toggleMenu()">
+        <button
+          id="menu-button"
+          class="text-white"
+          v-on:click="state.isMenuOpen = !state.isMenuOpen"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -42,8 +47,12 @@ function toggleMenu() {
     </div>
   </nav>
 
-  <div id="mobile-menu" class="md:hidden bg-cyan-500 text-white space-y-4 p-4 hidden">
-    <RouterLink to="/" class="text-white hover:text-gray-300">Webcams</RouterLink>
-    <RouterLink to="/map" class="text-white hover:text-gray-300">Map</RouterLink>
+  <div
+    id="mobile-menu"
+    :class="{ hidden: !state.isMenuOpen, block: state.isMenuOpen }"
+    class="md:hidden bg-cyan-500 text-white space-y-4 p-4"
+  >
+    <RouterLink to="/" class="block text-white hover:text-gray-300">Webcams</RouterLink>
+    <RouterLink to="/map" class="block text-white hover:text-gray-300">Map</RouterLink>
   </div>
 </template>
