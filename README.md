@@ -1,39 +1,62 @@
-# alpine-control-room
+# Alpine Control Room
 
-This template should help get you started developing with Vue 3 in Vite.
+Alpine Control Room is a web application designed to view and monitor various ski resort webcams in the Alps. For now, it supports only a few ski resort, in the future, more will be supported.
 
-## Recommended IDE Setup
+![Alpine Control Room](public/concept-1.webp)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Features
 
-## Type Support for `.vue` Imports in TS
+At its latest release, Alpine Control Room allows users to:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Monitor webcam in (almost) real-time
+- Visualize webcam locations on a map
 
-## Customize configuration
+## Local setup
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+If you don't want to instal the repository and run it locally, there is a GitHub page linked to this projec, when you can see the web application running.
 
-## Project Setup
+### Installation
 
-```sh
-npm install
-```
+To set up the project locally, follow these steps:
 
-### Compile and Hot-Reload for Development
+1. Clone the repository:
+
+    ```sh
+    git clone https://github.com/yourusername/alpine-control-room.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```sh
+    cd alpine-control-room
+    ```
+
+3. Install dependencies:
+
+    ```sh
+    npm install
+    ```
+
+### Usage
+
+To start the development server, run:
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Then, follow the instruction on the terminal to view the webapp.
+
+### Build
+
+To build the project for production, run:
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+The output will be in the `dist` directory.
 
-```sh
-npm run lint
-```
+## License
+
+This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. For more details, see [LICENSE](https://creativecommons.org/licenses/by-nc-nd/4.0/).
