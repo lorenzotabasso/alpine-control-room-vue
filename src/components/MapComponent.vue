@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import * as L from 'leaflet'
+import type { MapOptions } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import 'leaflet/dist/images/marker-icon-2x.png'
+import 'leaflet/dist/images/marker-icon.png'
+import 'leaflet/dist/images/marker-shadow.png'
 import { onMounted, ref } from 'vue'
 import type { Webcam } from '@/models/webcam'
 import { webcams } from '@/store/webcam'
-import type { MapOptions } from 'leaflet'
 
 onMounted(() => {
   const mapOptions: MapOptions = { scrollWheelZoom: true, maxZoom: 28, minZoom: 7 }
@@ -17,19 +20,15 @@ onMounted(() => {
   }).addTo(map)
 
   const allWebcams = ref<Webcam[]>(webcams)
-  allWebcams.value.map((webcam: Webcam) => {
+  allWebcams.value.forEach((webcam: Webcam) => {
     if (webcam.coordinates) {
-      let markerLabel: string
+      let markerLabel = `<b>${webcam.resort} - ${webcam.label}</b>`
       if (webcam.altitude) {
-        if (webcam.resortGroup) {
-          markerLabel = `<b>${webcam.resortGroup}</b><br><b>${webcam.resort} - ${webcam.label}</b><br><p>${webcam.altitude}</p>`
-        } else {
-          markerLabel = `<b>${webcam.resort} - ${webcam.label}</b><br><p>${webcam.altitude}</p>`
-        }
-      } else {
-        markerLabel = `<b>${webcam.resort} - ${webcam.label}</b>`
+        markerLabel += `<br><p>${webcam.altitude}</p>`
       }
-
+      if (webcam.resortGroup) {
+        markerLabel = `<b>${webcam.resortGroup}</b><br>${markerLabel}`
+      }
       markerLabel += `<br><a href="${webcam.link}" target="_blank">Open webcam</a>`
 
       L.marker([webcam.coordinates.latitude, webcam.coordinates.longitude])
@@ -48,13 +47,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="map"></div>
+  <div id="map" class="h-screen w-screen"></div>
 </template>
 
 <style scoped>
 #map {
-  width: 100%;
-  min-height: 50em;
+  height: 85vh;
+  width: 100vw;
 }
 .custom-icon {
   display: inline-block;

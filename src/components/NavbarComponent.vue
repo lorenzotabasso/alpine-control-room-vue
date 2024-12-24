@@ -50,7 +50,7 @@ const state = reactive({
   <div
     id="mobile-menu"
     :class="{ hidden: !state.isMenuOpen, block: state.isMenuOpen }"
-    class="md:hidden bg-cyan-500 text-white space-y-4 p-4"
+    class="md:hidden bg-cyan-500 text-white space-y-4 p-4 sticky top-0 z-50"
   >
     <RouterLink to="/" class="block text-white hover:text-gray-300">Webcams</RouterLink>
     <RouterLink to="/map" class="block text-white hover:text-gray-300">Map</RouterLink>
