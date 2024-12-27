@@ -2,7 +2,7 @@
 
 Alpine Control Room is a web application designed to view and monitor various ski resort webcams in the Alps. For now, it supports only a few ski resort, in the future, more will be supported.
 
-![Alpine Control Room](public/concept-1.webp)
+![Alpine Control Room](public/concept-3.webp)
 
 ## Features
 
@@ -10,6 +10,7 @@ At its latest release, Alpine Control Room allows users to:
 
 - Monitor webcam in (almost) real-time
 - Visualize webcam locations on a map
+- Consult avalanche and ground snow bulletins prepared by some Italian environmental monitoring institutions
 
 ## Local setup
 

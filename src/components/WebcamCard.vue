@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { ContentType, type Webcam } from '@/models/webcam'
-import IconBrokenImage from './icons/IconBrokenImage.vue'
-import IconMap from './icons/IconMap.vue'
+import { ContentType, type Webcam } from '@/models/webcam';
+import IconBrokenImage from './icons/IconBrokenImage.vue';
 
 const props = defineProps<Webcam>()
 
