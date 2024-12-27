@@ -19,6 +19,7 @@ const state = reactive({
       <div class="flex space-x-6 hidden md:flex">
         <RouterLink to="/" class="text-white hover:text-gray-300">Webcams</RouterLink>
         <RouterLink to="/map" class="text-white hover:text-gray-300">Map</RouterLink>
+        <RouterLink to="/report" class="text-white hover:text-gray-300">Enviromental reports</RouterLink>
       </div>
 
       <!-- Mobile menu button -->
@@ -54,5 +55,6 @@ const state = reactive({
   >
     <RouterLink to="/" class="block text-white hover:text-gray-300">Webcams</RouterLink>
     <RouterLink to="/map" class="block text-white hover:text-gray-300">Map</RouterLink>
+    <RouterLink to="/report" class="block text-white hover:text-gray-300">Enviromental reports</RouterLink>
   </div>
 </template>
