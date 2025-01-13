@@ -19,6 +19,7 @@ const allWebcams = ref<Webcam[]>(webcams)
           :label="webcam.label"
           :altitude="webcam.altitude"
           :contentType="webcam.contentType"
+          :source="webcam.source"
           :link="webcam.link"
           :thumbnailLink="webcam.thumbnailLink"
         >
