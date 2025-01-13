@@ -15,6 +15,7 @@ export interface Webcam {
   label: string
   altitude?: string
   contentType: ContentType
+  source?: string,
   link: string
   thumbnailLink?: string
 }
