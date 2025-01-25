@@ -222,8 +222,7 @@ export const webcams: Webcam[] = [
     label: 'Alpette',
     contentType: ContentType.IFRAME,
     source: 'https://www.webcamvialattea.it/webcam/alpette/',
-    link: 'https://g0.ipcamlive.com/player/player.php?alias=alpette&skin=white&autoplay=1',
-    thumbnailLink: 'https://s123.ipcamlive.com/streams/7b4ptietaquacm3ni/snapshot.jpg',
+    link: 'https://g0.ipcamlive.com/player/player.php?alias=alpette&skin=white&autoplay=1'
   },
   {
     nation: 'ITA',
@@ -262,8 +261,7 @@ export const webcams: Webcam[] = [
     label: 'Clotes - Hotel Avalanche',
     contentType: ContentType.IFRAME,
     source: 'https://www.webcamvialattea.it/webcam/clotes/',
-    link: 'https://g0.ipcamlive.com/player/player.php?alias=5dea0c21a9db6&skin=white&autoplay=1',
-    thumbnailLink: 'https://s58.ipcamlive.com/streams/3agyibalhedk6ci1e/snapshot.jpg',
+    link: 'https://g0.ipcamlive.com/player/player.php?alias=5dea0c21a9db6&skin=white&autoplay=1'
   },
   {
     nation: 'ITA',
@@ -276,7 +274,6 @@ export const webcams: Webcam[] = [
     contentType: ContentType.IFRAME,
     source: 'https://www.webcamvialattea.it/webcam/sportinia/',
     link: 'https://g0.ipcamlive.com/player/player.php?alias=5dea09b77bc9e&skin=white&autoplay=1',
-    thumbnailLink: 'https://s22.ipcamlive.com/streams/16bms9teuz7qmliv2/snapshot.jpg',
   },
   {
     nation: 'ITA',
@@ -303,8 +300,7 @@ export const webcams: Webcam[] = [
     altitude: '2298 m',
     contentType: ContentType.IFRAME,
     source: 'https://www.webcamvialattea.it/webcam/colle-bercia/',
-    link: 'https://g0.ipcamlive.com/player/player.php?alias=collebercia&skin=white&autoplay=1',
-    thumbnailLink: 'https://s31.ipcamlive.com/streams/1fhkbajzwn5dv078z/snapshot.jpg',
+    link: 'https://g0.ipcamlive.com/player/player.php?alias=collebercia&skin=white&autoplay=1'
   },
   {
     nation: 'FRA',
@@ -340,18 +336,9 @@ export const webcams: Webcam[] = [
   },
   {
     nation: 'ITA',
-    region: "Valle d'Aosta",
-    subRegion: "Val d'Ayas",
-    resort: 'Monterosa Ski',
-    label: 'Antagnod',
-    altitude: '1730 m',
-    contentType: ContentType.IMG,
-    link: 'https://www.lovevda.it/Media/LovevdaResp/Cache/Webcam/big_antagnod.jpg',
-  },
-  {
-    nation: 'ITA',
     region: 'Piemonte',
     subRegion: 'Val Sesia',
+    coordinates: { latitude: 45.878350, longitude: 7.867627 },
     resort: 'Monterosa Ski',
     label: 'Arrivo seggiovia Cimalegna',
     altitude: '3030 m',
@@ -362,6 +349,7 @@ export const webcams: Webcam[] = [
     nation: 'ITA',
     region: 'Piemonte',
     subRegion: 'Val Sesia',
+    coordinates: { latitude: 45.869648, longitude: 7.901498 },
     resort: 'Monterosa Ski',
     label: 'Bacino Mullero',
     altitude: '2150 m',
