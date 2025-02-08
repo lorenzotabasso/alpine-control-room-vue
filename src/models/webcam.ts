@@ -1,5 +1,3 @@
-import type { Coordinates } from './coordinates'
-
 export enum ContentType {
   IMG = 'img',
   IFRAME = 'iframe',
@@ -15,7 +13,12 @@ export interface Webcam {
   label: string
   altitude?: string
   contentType: ContentType
-  source?: string,
+  source?: string
   link: string
   thumbnailLink?: string
+}
+
+export interface Coordinates {
+  latitude: number
+  longitude: number
 }
