@@ -10,8 +10,9 @@ const search = ref('')
 const filteredWebcams = computed(() => {
   return allWebcams.value.filter((webcam) => {
     return webcam.resort.toLowerCase().includes(search.value.toLowerCase()) ||
+      webcam.nation.toLowerCase().includes(search.value.toLowerCase()) ||
       webcam.region.toLowerCase().includes(search.value.toLowerCase()) ||
-      webcam.subRegion.toLowerCase().includes(search.value.toLowerCase())
+      webcam.subRegion?.toLowerCase().includes(search.value.toLowerCase())
   });
 });
 
