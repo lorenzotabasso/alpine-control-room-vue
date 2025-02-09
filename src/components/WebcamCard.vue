@@ -18,6 +18,14 @@ function hasThumbnail(source: Webcam): boolean {
   }
 }
 
+function mapNationToFlag(nation: string): string {
+  if (nation.trim().toLowerCase() === 'ita') {
+    return "🇮🇹"
+  } else {
+    return "🇫🇷"
+  }
+}
+
 </script>
 
 <template>
@@ -33,7 +41,8 @@ function hasThumbnail(source: Webcam): boolean {
     <div class="grid">
       <div>
         <p class="m-2 text-xl font-bold">{{ props.resort }}</p>
-        <p class="m-2">{{ props.altitude ? props.label + ', ' + props.altitude : props.label }}</p>
+        <p class="m-2 font-semibold">{{ props.altitude ? props.label + ', ' + props.altitude : props.label }}</p>
+        <p class="m-2">{{ mapNationToFlag(props.nation) }} {{ props.region }} {{ props.subRegion ? ' - ' + props.subRegion : '' }}</p>
       </div>
       <div class="grid grid-cols-2 gap-2">
         <div>
