@@ -166,3 +166,9 @@ a.secondary {
     filter: invert();
   }
 } */
+
+.webcamthumbnail {
+  width: 496px;
+  height: 279px;
+  border-radius: 8px;
+}
