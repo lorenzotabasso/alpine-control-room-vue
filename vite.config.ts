@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/alpine-control-room/",
+  base: "/alpine-control-room-vue/",
   plugins: [
     vue(),
     vueDevTools(),

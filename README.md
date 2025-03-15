@@ -23,13 +23,13 @@ To set up the project locally, follow these steps:
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/alpine-control-room.git
+    git clone https://github.com/yourusername/alpine-control-room-vue.git
     ```
 
 2. Navigate to the project directory:
 
     ```sh
-    cd alpine-control-room
+    cd alpine-control-room-vue
     ```
 
 3. Install dependencies:
